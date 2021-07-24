@@ -33,10 +33,12 @@ function reducer(state, action) {
       return { ...state };
     case "DEC":
       state.users.map((item) => {
-        if (item.id === action.payload && item.count > 0) {
-          item.count--;
-        } else {
-          item.count = 0;
+        if (item.id === action.payload) {
+          if (item.count > 0) {
+            item.count--;
+          } else {
+            item.count = 0;
+          }
         }
         return item;
       });
@@ -86,6 +88,22 @@ function App() {
         firstName: "Jack",
         lastName: "Ma",
         userName: "@ma",
+        count: 0,
+        active: false,
+      },
+      {
+        id: 5,
+        firstName: "Elon",
+        lastName: "Musk",
+        userName: "@elon",
+        count: 0,
+        active: false,
+      },
+      {
+        id: 6,
+        firstName: "Bill",
+        lastName: "Gates",
+        userName: "@bill",
         count: 0,
         active: true,
       },

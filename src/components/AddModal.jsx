@@ -8,7 +8,7 @@ const ModalExample = () => {
   return (
     <div>
       <Modal isOpen={context.modal} toggle={context.toggle}>
-        <ModalHeader toggle={context.toggle}>Add user</ModalHeader>
+        <ModalHeader toggle={context.toggle}>{context.currentUser ? "Edit user": "Add user"}</ModalHeader>
         <ModalBody>
           <form id="form" onSubmit={context.hendleSubmit}>
             <input

@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import EditIcon from "@material-ui/icons/Edit";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import { myContext } from "../App";
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
 
 export default function TableSection() {
   const context = useContext(myContext);
@@ -45,16 +47,16 @@ export default function TableSection() {
                   <td className="btn-count">
                     <button
                       onClick={() => context.increment(item.id)}
-                      className="btn btn-secondary btn-sm"
+                      className="btn btn-outline-success btn-sm mx-2"
                     >
-                      +
+                      <AddIcon />
                     </button>{" "}
                     {item.count}{" "}
                     <button
                       onClick={() => context.decrement(item.id)}
-                      className="btn btn-secondary btn-sm"
+                      className="btn btn-outline-warning btn-sm mx-2"
                     >
-                      -
+                      <RemoveIcon />
                     </button>
                   </td>
                   <td>
@@ -68,13 +70,13 @@ export default function TableSection() {
                   <td>
                     <button
                       onClick={() => context.editUser(item)}
-                      className="btn btn-outline-info"
+                      className="btn btn-sm btn-outline-info"
                     >
                       <EditIcon />
                     </button>{" "}
                     <button
                       onClick={() => context.deletUser(item.id)}
-                      className="btn btn-outline-danger"
+                      className="btn btn-sm btn-outline-danger"
                     >
                       <HighlightOffIcon />
                     </button>
