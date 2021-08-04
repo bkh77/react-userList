@@ -6,4 +6,4 @@ React (useReducer, useContext), SCSS, Bootstrap, Reactstrap, MaterialUI icons;
 
 ## Properties
 
-C R U D, filter by names & by avtive ;
+React Users list | CRUD | Search | Filter by active | one modal for add & edit
